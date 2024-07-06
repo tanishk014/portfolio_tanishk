@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #f8f9fa; /* Light gray background */
+      color: #343a40; /* Dark gray text color */
+    }
+    .about-section {
+      background-color: #ffffff; /* White background */
+      padding: 50px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); /* Light shadow */
+    }
+    .profile-image {
+      max-width: 200px;
+      border-radius: 50%;
+    }
+    .text-center {
+      text-align: center;
+    }
+    .about-text {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand home-button" href="#">
+      <i class="fas fa-home"></i> Home
+    </a>
+  </nav>
+
+  <div class="container">
+    <div class="about-section">
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <img src="image/tanishk image.jpeg" alt="Profile Picture" class="profile-image">
+        </div>
+        <div class="col-md-8">
+          <h2>About Me</h2>
+          <p class="about-text">I am a BTech student pursuing my degree in [Your Field of Study]. Alongside my studies, I am passionate about web development and have been honing my skills in HTML, CSS, JavaScript, and various web development frameworks.</p>
+          <p class="about-text">I enjoy building responsive and visually appealing websites and applications that provide seamless user experiences. In addition to front-end development, I also have experience with back-end technologies such as PHP and databases like MySQL.</p>
+          <p class="about-text">My goal is to continue learning and growing as a developer while contributing to meaningful projects and solving real-world problems through technology.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelector('.home-button').addEventListener('click', function () {
+        window.location.href = 'index.html'; // Replace 'index.html' with your home page URL
+      });
+    });
+  </script>
+</body>
+</html>

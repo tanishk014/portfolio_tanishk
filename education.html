@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education Details</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand home-button" href="#">
+      <i class="fas fa-home"></i> Home
+    </a>
+  </nav>
+
+  <div class="container">
+    <h1 class="text-center">Education Details</h1>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Exam</th>
+          <th scope="col">Stream</th>
+          <th scope="col">Year of Passing</th>
+          <th scope="col">Percentage</th>
+          <th scope="col">University/Board</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"><i class="fas fa-graduation-cap"></i> SSC</th>
+          <td>Science</td>
+          <td>2019</td>
+          <td>80%</td>
+          <td>State Board</td>
+        </tr>
+        <tr>
+          <th scope="row"><i class="fas fa-graduation-cap"></i> HSC</th>
+          <td>Science</td>
+          <td>2021</td>
+          <td>68%</td>
+          <td>State Board</td>
+        </tr>
+        <tr>
+          <th scope="row"><i class="fas fa-graduation-cap"></i> Graduation</th>
+          <td>Computer Science & Engineering</td>
+          <td>2025</td>
+          <td>CGPA 7</td>
+          <td>Arvind Gavali College Of Engineering Satara</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelector('.home-button').addEventListener('click', function () {
+        window.location.href = 'index.html'; // Replace 'index.html' with your home page URL
+      });
+    });
+  </script>
+</body>
+</html>
