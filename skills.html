@@ -1,98 +1,245 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skills</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <!-- Custom CSS -->
-  <style>
-    .header {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-    .card-section {
-      background-color: #f8f9fa; /* Light gray color */
-      padding: 50px 0;
-    }
-    .card-body {
-      text-align: center;
-    }
-    .skill-icon {
-      font-size: 40px;
-      margin-bottom: 15px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Section</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header, .footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+        }
+
+        .header {
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        .home-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            font-size: 14px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+
+        .home-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .skills-card {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .skills-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .card-container .col-md-3, .card-container .col-sm-6 {
+            margin-bottom: 20px;
+        }
+
+        .skills-card i {
+            font-size: 50px;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .skills-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .footer {
+            padding: 10px;
+            font-size: 14px;
+            margin-top: auto;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+        }
+
+        .modal-body {
+            text-align: center;
+        }
+
+        .instruction-message {
+            font-size: 18px;
+            margin-top: 20px;
+            font-weight: 600;
+            color: #007bff;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand home-button" href="#">
-      <i class="fas fa-home"></i> Home
-    </a>
-  </nav>
-
-  <div class="container">
-    <h1 class="header">Skills</h1>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="card mb-4">
-          <div class="card-body">
-            <h2 class="card-title">Web Development Skills</h2>
-            <div class="skill">
-              <i class="fab fa-html5 skill-icon"></i> HTML
-            </div>
-            <div class="skill">
-              <i class="fab fa-css3-alt skill-icon"></i> CSS
-            </div>
-            <div class="skill">
-              <i class="fab fa-bootstrap skill-icon"></i> Bootstrap
-            </div>
-            <div class="skill">
-              <i class="fab fa-php skill-icon"></i> PHP
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card mb-4">
-          <div class="card-body">
-            <h2 class="card-title">Data Analytics Skills</h2>
-            <div class="skill">
-              <i class="fas fa-chart-line skill-icon"></i> Data Analysis
-            </div>
-            <div class="skill">
-              <i class="fas fa-database skill-icon"></i> SQL
-            </div>
-            <div class="skill">
-              <i class="fas fa-chart-pie skill-icon"></i> Data Visualization
-            </div>
-            <div class="skill">
-              <i class="fas fa-tools skill-icon"></i> Data Cleaning
-            </div>
-            <div class="skill">
-              <i class="fas fa-cogs skill-icon"></i> Machine Learning
-            </div>
-          </div>
-        </div>
-      </div>
+    <!-- Header Section -->
+    <div class="header">
+        <h1>My Skills</h1>
+        <button class="home-btn" onclick="window.location.href='index.html';">Home</button>
     </div>
-  </div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Instruction Message -->
+    <div class="instruction-message">
+        <p>Click on any skill below to learn more about it!</p>
+    </div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      document.querySelector('.home-button').addEventListener('click', function () {
-        window.location.href = 'index.html'; // Replace 'index.html' with your home page URL
-      });
-    });
-  </script>
+    <!-- Main Content Section -->
+    <div class="container">
+        <div class="card-container row">
+            <!-- Skill Cards -->
+            <div class="col-md-3 col-sm-6">
+                <div class="skills-card" data-toggle="modal" data-target="#skillModal" data-skill="SQL" data-toggle="tooltip" title="Click to learn more about SQL">
+                    <i class="fas fa-database"></i>
+                    <h3>SQL</h3>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="skills-card" data-toggle="modal" data-target="#skillModal" data-skill="Core Java" data-toggle="tooltip" title="Click to learn more about Core Java">
+                    <i class="fab fa-java"></i>
+                    <h3>Core Java</h3>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="skills-card" data-toggle="modal" data-target="#skillModal" data-skill="PHP" data-toggle="tooltip" title="Click to learn more about PHP">
+                    <i class="fab fa-php"></i>
+                    <h3>PHP</h3>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="skills-card" data-toggle="modal" data-target="#skillModal" data-skill="HTML" data-toggle="tooltip" title="Click to learn more about HTML">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML</h3>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="skills-card" data-toggle="modal" data-target="#skillModal" data-skill="CSS" data-toggle="tooltip" title="Click to learn more about CSS">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS</h3>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="skills-card" data-toggle="modal" data-target="#skillModal" data-skill="JavaScript" data-toggle="tooltip" title="Click to learn more about JavaScript">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="skills-card" data-toggle="modal" data-target="#skillModal" data-skill="Bootstrap" data-toggle="tooltip" title="Click to learn more about Bootstrap">
+                    <i class="fab fa-bootstrap"></i>
+                    <h3>Bootstrap</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Skill Details -->
+    <div class="modal fade" id="skillModal" tabindex="-1" role="dialog" aria-labelledby="skillModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="skillModalLabel">Skill Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="skillDescription"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2025 Your Website. All Rights Reserved.</p>
+    </div>
+
+    <!-- Bootstrap JS and Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom Script for Modal Content -->
+    <script>
+        // Handle skill card click to show specific skill details in modal
+        $('#skillModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget); // Button that triggered the modal
+            var skillName = button.data('skill'); // Extract skill name from data-* attributes
+            var skillDescription = '';
+
+            // Define skill descriptions
+            switch(skillName) {
+                case 'SQL':
+                    skillDescription = 'SQL is used to communicate with databases and manage data using queries.';
+                    break;
+                case 'Core Java':
+                    skillDescription = 'Core Java involves learning the fundamentals of Java programming language.';
+                    break;
+                case 'PHP':
+                    skillDescription = 'PHP is a popular server-side scripting language for web development.';
+                    break;
+                case 'HTML':
+                    skillDescription = 'HTML is the standard markup language for creating web pages.';
+                    break;
+                case 'CSS':
+                    skillDescription = 'CSS is used to style and layout web pages, including design, colors, and fonts.';
+                    break;
+                case 'JavaScript':
+                    skillDescription = 'JavaScript is a programming language that enables interactive web pages.';
+                    break;
+                case 'Bootstrap':
+                    skillDescription = 'Bootstrap is a front-end framework for developing responsive, mobile-first web pages.';
+                    break;
+                default:
+                    skillDescription = 'No description available.';
+            }
+
+            // Update the modal with the correct skill description
+            var modal = $(this);
+            modal.find('.modal-body #skillDescription').text(skillDescription);
+            modal.find('.modal-title').text(skillName);
+        });
+
+        // Enable tooltips
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+
 </body>
 </html>
