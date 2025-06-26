@@ -1,245 +1,211 @@
  <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills Section</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills - Tanishk Wagh</title>
 
-        .header, .footer {
-            text-align: center;
-            background-color: #333;
-            color: white;
-        }
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-        .header {
-            padding: 10px;
-            font-size: 20px;
-        }
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #141e30, #243b55);
+      color: #fff;
+      padding-top: 80px;
+    }
 
-        .home-btn {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            font-size: 14px;
-            cursor: pointer;
-            margin: 10px 0;
-        }
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
 
-        .home-btn:hover {
-            background-color: #0056b3;
-        }
+    .navbar-brand {
+      color: #00d9ff !important;
+      font-weight: 600;
+    }
 
-        .skills-card {
-            background-color: #f8f9fa;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            margin: 10px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+    .section-title {
+      text-align: center;
+      color: #00d9ff;
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+    }
 
-        .skills-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-        }
+    .skill-card {
+      background-color: rgba(255, 255, 255, 0.06);
+      border: none;
+      border-radius: 15px;
+      padding: 30px;
+      transition: 0.3s ease;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
 
-        .card-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 20px;
-        }
+    .skill-card:hover {
+      transform: translateY(-6px);
+      background-color: rgba(255, 255, 255, 0.1);
+    }
 
-        .card-container .col-md-3, .card-container .col-sm-6 {
-            margin-bottom: 20px;
-        }
+    .skill-card i {
+      font-size: 2.5rem;
+      color: #00d9ff;
+      margin-bottom: 15px;
+    }
 
-        .skills-card i {
-            font-size: 50px;
-            color: #007bff;
-            margin-bottom: 15px;
-        }
+    .skill-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #fff;
+    }
 
-        .skills-card h3 {
-            font-size: 18px;
-            font-weight: 600;
-        }
-
-        .footer {
-            padding: 10px;
-            font-size: 14px;
-            margin-top: auto;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            background-color: #333;
-        }
-
-        .modal-body {
-            text-align: center;
-        }
-
-        .instruction-message {
-            font-size: 18px;
-            margin-top: 20px;
-            font-weight: 600;
-            color: #007bff;
-            text-align: center;
-        }
-    </style>
+    footer {
+      background-color: #111;
+      color: #ccc;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Header Section -->
-    <div class="header">
-        <h1>My Skills</h1>
-        <button class="home-btn" onclick="window.location.href='index.html';">Home</button>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><i class="fas fa-home"></i> Tanishk Wagh</a>
+  </div>
+</nav>
+
+<!-- Skills Section -->
+<div class="container mt-5">
+  <h2 class="section-title"><i class="fas fa-tools"></i> My Skills</h2>
+
+  <div class="row g-4">
+    <!-- HTML -->
+    <div class="col-md-4">
+      <div class="skill-card" data-bs-toggle="modal" data-bs-target="#htmlModal">
+        <i class="fab fa-html5"></i>
+        <div class="skill-title">HTML</div>
+      </div>
     </div>
-
-    <!-- Instruction Message -->
-    <div class="instruction-message">
-        <p>Click on any skill below to learn more about it!</p>
+    <!-- CSS -->
+    <div class="col-md-4">
+      <div class="skill-card" data-bs-toggle="modal" data-bs-target="#cssModal">
+        <i class="fab fa-css3-alt"></i>
+        <div class="skill-title">CSS</div>
+      </div>
     </div>
-
-    <!-- Main Content Section -->
-    <div class="container">
-        <div class="card-container row">
-            <!-- Skill Cards -->
-            <div class="col-md-3 col-sm-6">
-                <div class="skills-card" data-toggle="modal" data-target="#skillModal" data-skill="SQL" data-toggle="tooltip" title="Click to learn more about SQL">
-                    <i class="fas fa-database"></i>
-                    <h3>SQL</h3>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="skills-card" data-toggle="modal" data-target="#skillModal" data-skill="Core Java" data-toggle="tooltip" title="Click to learn more about Core Java">
-                    <i class="fab fa-java"></i>
-                    <h3>Core Java</h3>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="skills-card" data-toggle="modal" data-target="#skillModal" data-skill="PHP" data-toggle="tooltip" title="Click to learn more about PHP">
-                    <i class="fab fa-php"></i>
-                    <h3>PHP</h3>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="skills-card" data-toggle="modal" data-target="#skillModal" data-skill="HTML" data-toggle="tooltip" title="Click to learn more about HTML">
-                    <i class="fab fa-html5"></i>
-                    <h3>HTML</h3>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="skills-card" data-toggle="modal" data-target="#skillModal" data-skill="CSS" data-toggle="tooltip" title="Click to learn more about CSS">
-                    <i class="fab fa-css3-alt"></i>
-                    <h3>CSS</h3>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="skills-card" data-toggle="modal" data-target="#skillModal" data-skill="JavaScript" data-toggle="tooltip" title="Click to learn more about JavaScript">
-                    <i class="fab fa-js"></i>
-                    <h3>JavaScript</h3>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="skills-card" data-toggle="modal" data-target="#skillModal" data-skill="Bootstrap" data-toggle="tooltip" title="Click to learn more about Bootstrap">
-                    <i class="fab fa-bootstrap"></i>
-                    <h3>Bootstrap</h3>
-                </div>
-            </div>
-        </div>
+    <!-- Core Java -->
+    <div class="col-md-4">
+      <div class="skill-card" data-bs-toggle="modal" data-bs-target="#javaModal">
+        <i class="fab fa-java"></i>
+        <div class="skill-title">Core Java</div>
+      </div>
     </div>
-
-    <!-- Modal for Skill Details -->
-    <div class="modal fade" id="skillModal" tabindex="-1" role="dialog" aria-labelledby="skillModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="skillModalLabel">Skill Details</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p id="skillDescription"></p>
-                </div>
-            </div>
-        </div>
+    <!-- SQL -->
+    <div class="col-md-4">
+      <div class="skill-card" data-bs-toggle="modal" data-bs-target="#sqlModal">
+        <i class="fas fa-database"></i>
+        <div class="skill-title">SQL</div>
+      </div>
     </div>
-
-    <!-- Footer Section -->
-    <div class="footer">
-        <p>&copy; 2025 Your Website. All Rights Reserved.</p>
+    <!-- PHP -->
+    <div class="col-md-4">
+      <div class="skill-card" data-bs-toggle="modal" data-bs-target="#phpModal">
+        <i class="fab fa-php"></i>
+        <div class="skill-title">PHP</div>
+      </div>
     </div>
+  </div>
+</div>
 
-    <!-- Bootstrap JS and Dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Modals -->
 
-    <!-- Custom Script for Modal Content -->
-    <script>
-        // Handle skill card click to show specific skill details in modal
-        $('#skillModal').on('show.bs.modal', function (event) {
-            var button = $(event.relatedTarget); // Button that triggered the modal
-            var skillName = button.data('skill'); // Extract skill name from data-* attributes
-            var skillDescription = '';
+<!-- HTML Modal -->
+<div class="modal fade" id="htmlModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-dark">
+      <div class="modal-header">
+        <h5 class="modal-title">HTML - Basics</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>HTML (HyperText Markup Language) is the standard language used to create web pages. It defines the structure and layout using elements like headings, paragraphs, links, images, etc.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-            // Define skill descriptions
-            switch(skillName) {
-                case 'SQL':
-                    skillDescription = 'SQL is used to communicate with databases and manage data using queries.';
-                    break;
-                case 'Core Java':
-                    skillDescription = 'Core Java involves learning the fundamentals of Java programming language.';
-                    break;
-                case 'PHP':
-                    skillDescription = 'PHP is a popular server-side scripting language for web development.';
-                    break;
-                case 'HTML':
-                    skillDescription = 'HTML is the standard markup language for creating web pages.';
-                    break;
-                case 'CSS':
-                    skillDescription = 'CSS is used to style and layout web pages, including design, colors, and fonts.';
-                    break;
-                case 'JavaScript':
-                    skillDescription = 'JavaScript is a programming language that enables interactive web pages.';
-                    break;
-                case 'Bootstrap':
-                    skillDescription = 'Bootstrap is a front-end framework for developing responsive, mobile-first web pages.';
-                    break;
-                default:
-                    skillDescription = 'No description available.';
-            }
+<!-- CSS Modal -->
+<div class="modal fade" id="cssModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-dark">
+      <div class="modal-header">
+        <h5 class="modal-title">CSS - Basics</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>CSS (Cascading Style Sheets) is used to style and layout web pages. It controls fonts, colors, spacing, and responsive design across devices.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-            // Update the modal with the correct skill description
-            var modal = $(this);
-            modal.find('.modal-body #skillDescription').text(skillDescription);
-            modal.find('.modal-title').text(skillName);
-        });
+<!-- Java Modal -->
+<div class="modal fade" id="javaModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-dark">
+      <div class="modal-header">
+        <h5 class="modal-title">Core Java - Basics</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Core Java includes basic concepts like Object-Oriented Programming, classes, objects, loops, arrays, and exception handling used in Java applications.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-        // Enable tooltips
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
+<!-- SQL Modal -->
+<div class="modal fade" id="sqlModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-dark">
+      <div class="modal-header">
+        <h5 class="modal-title">SQL - Basics</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>SQL (Structured Query Language) is used to manage data in relational databases. It includes commands like SELECT, INSERT, UPDATE, DELETE, and JOIN.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PHP Modal -->
+<div class="modal fade" id="phpModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-dark">
+      <div class="modal-header">
+        <h5 class="modal-title">PHP - Basics</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>PHP (Hypertext Preprocessor) is a server-side scripting language used to build dynamic websites. It can interact with databases, handle forms, and manage sessions.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center mt-5 py-3">
+  <p>&copy; 2024 Tanishk Wagh. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
