@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -15,53 +15,54 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #141e30, #243b55);
-      color: #fff;
+      background: #ffffff;
+      color: #333;
       padding-top: 80px;
     }
 
     .navbar {
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: #0d6efd;
     }
 
     .navbar-brand {
-      color: #00d9ff !important;
+      color: #fff !important;
       font-weight: 600;
     }
 
     .section-title {
       text-align: center;
-      color: #00d9ff;
+      color: #0d6efd;
       font-size: 2.2rem;
       margin-bottom: 40px;
+      font-weight: 700;
     }
 
     .skill-card {
-      background-color: rgba(255, 255, 255, 0.06);
+      background-color: #fff;
       border: none;
       border-radius: 15px;
       padding: 30px;
       transition: 0.3s ease;
       text-align: center;
       cursor: pointer;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     }
 
     .skill-card:hover {
       transform: translateY(-6px);
-      background-color: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
     }
 
     .skill-card i {
       font-size: 2.5rem;
-      color: #00d9ff;
+      color: #0d6efd;
       margin-bottom: 15px;
     }
 
     .skill-title {
       font-size: 1.3rem;
       font-weight: 600;
-      color: #fff;
+      color: #333;
     }
 
     footer {
@@ -117,6 +118,34 @@
       <div class="skill-card" data-bs-toggle="modal" data-bs-target="#phpModal">
         <i class="fab fa-php"></i>
         <div class="skill-title">PHP</div>
+      </div>
+    </div>
+    <!-- Manual Testing -->
+    <div class="col-md-4">
+      <div class="skill-card" data-bs-toggle="modal" data-bs-target="#manualModal">
+        <i class="fas fa-vial"></i>
+        <div class="skill-title">Manual Testing</div>
+      </div>
+    </div>
+    <!-- Jira -->
+    <div class="col-md-4">
+      <div class="skill-card" data-bs-toggle="modal" data-bs-target="#jiraModal">
+        <i class="fab fa-jira"></i>
+        <div class="skill-title">Jira</div>
+      </div>
+    </div>
+    <!-- GitHub -->
+    <div class="col-md-4">
+      <div class="skill-card" data-bs-toggle="modal" data-bs-target="#githubModal">
+        <i class="fab fa-github"></i>
+        <div class="skill-title">GitHub</div>
+      </div>
+    </div>
+    <!-- BrowserStack -->
+    <div class="col-md-4">
+      <div class="skill-card" data-bs-toggle="modal" data-bs-target="#browserstackModal">
+        <i class="fas fa-globe"></i>
+        <div class="skill-title">BrowserStack</div>
       </div>
     </div>
   </div>
@@ -199,9 +228,69 @@
   </div>
 </div>
 
+<!-- Manual Testing Modal -->
+<div class="modal fade" id="manualModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-dark">
+      <div class="modal-header">
+        <h5 class="modal-title">Manual Testing</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Manual Testing involves testing software manually without using automation tools. Testers check for bugs, performance issues, and usability by following test cases and scenarios.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Jira Modal -->
+<div class="modal fade" id="jiraModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-dark">
+      <div class="modal-header">
+        <h5 class="modal-title">Jira</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Jira is a popular project management and issue tracking tool used for Agile software development. It helps in sprint planning, bug tracking, and team collaboration.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GitHub Modal -->
+<div class="modal fade" id="githubModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-dark">
+      <div class="modal-header">
+        <h5 class="modal-title">GitHub</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>GitHub is a version control and collaboration platform for developers. It allows teams to manage code repositories, track issues, and contribute to open-source projects.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BrowserStack Modal -->
+<div class="modal fade" id="browserstackModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-dark">
+      <div class="modal-header">
+        <h5 class="modal-title">BrowserStack</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>BrowserStack is a cloud-based testing platform that allows developers to test websites and apps across real devices and browsers without requiring physical hardware.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Footer -->
 <footer class="text-center mt-5 py-3">
-  <p>&copy; 2024 Tanishk Wagh. All rights reserved.</p>
+  <p>&copy; 2025 Tanishk Wagh. All rights reserved.</p>
 </footer>
 
 <!-- Bootstrap JS -->
