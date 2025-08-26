@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -21,10 +21,11 @@
     body, html {
       margin: 0;
       padding: 0;
-      height: 100%;
-      background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
-      background-size: cover;
-      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: #ffffff;  /* White background */
+      color: #000;          /* Black text for contrast */
     }
 
     nav.navbar {
@@ -37,6 +38,7 @@
     }
 
     main {
+      flex: 1;  /* pushes footer to bottom */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -44,14 +46,13 @@
     }
 
     .overlay {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(12px);
+      background: #f8f9fa; /* light gray overlay */
       border-radius: 20px;
       padding: 40px;
       width: 100%;
       max-width: 1000px;
-      box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
-      color: #fff;
+      box-shadow: 0 8px 32px 0 rgba(0,0,0,0.1);
+      color: #000;
       transition: 0.4s ease;
     }
 
@@ -64,12 +65,12 @@
       height: 220px;
       border-radius: 50%;
       border: 6px solid #fff;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
       object-fit: cover;
     }
 
     h1 span {
-      color: #00d9ff;
+      color: #007bff;
     }
 
     .btn-custom {
@@ -86,10 +87,12 @@
     }
 
     footer {
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.8);
       padding: 15px 0;
       text-align: center;
       font-size: 14px;
+      color: #fff;
+      margin-top: auto; /* ensures footer stays at bottom */
     }
 
     @media (max-width: 768px) {
