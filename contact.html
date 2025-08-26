@@ -18,17 +18,16 @@
     }
 
     body {
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #fff;
+      background: #ffffff; /* Changed to white */
+      color: #333; /* Dark text for readability on white */
       padding-top: 80px;
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.05);
+      background: #f8f9fa; /* Light background for card */
       border: none;
       border-radius: 15px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
       padding: 30px;
       transition: 0.3s ease;
     }
@@ -54,26 +53,32 @@
 
     .btn-glow:hover {
       background-color: #00b8cc;
+      color: #fff;
     }
 
     .modal-content {
-      background-color: #1e2a38;
-      color: white;
+      background-color: #ffffff; /* Modal white */
+      color: #333;
       border-radius: 12px;
     }
 
     .form-control {
-      background-color: #2f3e4d;
-      color: white;
-      border: 1px solid #555;
+      background-color: #f1f3f6;
+      color: #333;
+      border: 1px solid #ccc;
     }
 
     .form-control::placeholder {
-      color: #bbb;
+      color: #777;
     }
 
     .modal-footer button {
       border-radius: 20px;
+    }
+
+    footer {
+      background: #111;
+      color: #ccc;
     }
   </style>
 </head>
@@ -102,7 +107,7 @@
 
 <!-- Contact Card -->
 <div class="container mt-5">
-  <div class="card text-center text-white">
+  <div class="card text-center">
     <h2 class="mb-4">Get in Touch</h2>
     <p><i class="fas fa-map-marker-alt icon"></i>Satara, Maharashtra, India</p>
     <p><i class="fas fa-phone icon"></i>+91 95616 66471</p>
@@ -116,10 +121,10 @@
 <!-- Modal -->
 <div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content text-white">
+    <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="emailModalLabel"><i class="fas fa-envelope-open-text"></i> Send me an Email</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
         <form id="emailForm">
@@ -146,7 +151,7 @@
 </div>
 
 <!-- Footer -->
-<footer class="text-center mt-5 py-3 bg-dark text-white-50">
+<footer class="text-center mt-5 py-3">
   <p>&copy; 2025 Tanishk Wagh. All rights reserved.</p>
 </footer>
 
