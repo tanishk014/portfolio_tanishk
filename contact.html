@@ -18,13 +18,17 @@
     }
 
     body {
-      background: #ffffff; /* Changed to white */
-      color: #333; /* Dark text for readability on white */
+      background: #ffffff; /* White background */
+      color: #333; /* Dark text */
       padding-top: 80px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Ensures footer sticks */
     }
 
     .card {
-      background: #f8f9fa; /* Light background for card */
+      background: #f8f9fa; /* Light card */
       border: none;
       border-radius: 15px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
@@ -57,7 +61,7 @@
     }
 
     .modal-content {
-      background-color: #ffffff; /* Modal white */
+      background-color: #ffffff; /* White modal */
       color: #333;
       border-radius: 12px;
     }
@@ -79,6 +83,10 @@
     footer {
       background: #111;
       color: #ccc;
+      text-align: center;
+      padding: 12px;
+      margin-top: auto; /* Push footer to bottom */
+      width: 100%;
     }
   </style>
 </head>
@@ -151,7 +159,7 @@
 </div>
 
 <!-- Footer -->
-<footer class="text-center mt-5 py-3">
+<footer>
   <p>&copy; 2025 Tanishk Wagh. All rights reserved.</p>
 </footer>
 
