@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -14,19 +14,18 @@
 
   <style>
     body {
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #fff;
+      background: #ffffff;
+      color: #333;
       font-family: 'Poppins', sans-serif;
       padding-top: 80px;
     }
 
     .navbar {
-      background-color: rgba(0, 0, 0, 0.8);
-      backdrop-filter: blur(10px);
+      background-color: #0d6efd;
     }
 
     .navbar-brand {
-      color: #00d9ff !important;
+      color: #fff !important;
       font-weight: 600;
     }
 
@@ -34,38 +33,63 @@
       text-align: center;
       font-size: 2.2rem;
       margin-bottom: 40px;
-      color: #00d9ff;
+      color: #0d6efd;
+      font-weight: 700;
     }
 
     .card {
-      background-color: rgba(255, 255, 255, 0.05);
+      background-color: #fff;
       border: none;
       border-radius: 15px;
       padding: 25px;
       margin-bottom: 20px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
     }
 
     .card-title {
       font-size: 1.5rem;
       font-weight: 600;
-      color: #00d9ff;
+      color: #0d6efd;
     }
 
     .card-text i {
-      color: #00d9ff;
+      color: #0d6efd;
       margin-right: 8px;
     }
 
-    @media (max-width: 576px) {
-      .card-title {
-        font-size: 1.2rem;
-      }
+    /* Timeline Styling */
+    .timeline {
+      position: relative;
+      margin: 30px 0;
+      padding-left: 30px;
+      border-left: 3px solid #0d6efd;
+    }
+
+    .timeline-item {
+      margin-bottom: 25px;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -11px;
+      top: 5px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #0d6efd;
+    }
+
+    .timeline-item h6 {
+      font-weight: 600;
+      color: #0d6efd;
     }
   </style>
 </head>
@@ -107,6 +131,44 @@
     <p class="card-text"><i class="fas fa-calendar-alt"></i> Year of Passing: 2025</p>
     <p class="card-text"><i class="fas fa-graduation-cap"></i> CGPA: 7.0</p>
     <p class="card-text"><i class="fas fa-university"></i> College: Arvind Gavali College Of Engineering, Satara</p>
+  </div>
+
+  <!-- Timeline Button -->
+  <div class="text-center mt-4">
+    <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#timelineModal">
+      <i class="fas fa-project-diagram"></i> View Education Timeline
+    </button>
+  </div>
+</div>
+
+<!-- Timeline Modal -->
+<div class="modal fade" id="timelineModal" tabindex="-1" aria-labelledby="timelineModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="timelineModalLabel"><i class="fas fa-stream"></i> Education Timeline</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="timeline">
+          <div class="timeline-item">
+            <h6>2019 - SSC</h6>
+            <p>Science Stream | 80% | State Board</p>
+          </div>
+          <div class="timeline-item">
+            <h6>2021 - HSC</h6>
+            <p>Science Stream | 68% | State Board</p>
+          </div>
+          <div class="timeline-item">
+            <h6>2025 - Graduation</h6>
+            <p>B.Tech in Computer Science & Engineering | CGPA: 7.0 | Arvind Gavali College Of Engineering, Satara</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
 </div>
 
