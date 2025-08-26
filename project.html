@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -14,46 +14,58 @@
 
   <style>
     body {
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      background-color: #fff;
       font-family: 'Poppins', sans-serif;
-      color: #fff;
+      color: #333;
       padding-top: 80px;
     }
 
     .navbar {
-      background-color: rgba(0, 0, 0, 0.8);
+      background: linear-gradient(90deg, #00d9ff, #0077b6);
     }
 
     .navbar-brand {
-      color: #00d9ff !important;
+      color: #fff !important;
       font-weight: 600;
     }
 
     .section-title {
       text-align: center;
       font-size: 2.2rem;
-      color: #00d9ff;
-      margin-bottom: 40px;
+      color: #0077b6;
+      margin-bottom: 50px;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      width: 80px;
+      height: 4px;
+      background: #00d9ff;
+      display: block;
+      margin: 10px auto 0;
+      border-radius: 5px;
     }
 
     .card {
-      background-color: rgba(255, 255, 255, 0.05);
+      background-color: #ffffff;
       border: none;
       border-radius: 15px;
       padding: 20px;
       transition: all 0.3s ease;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
       height: 100%;
     }
 
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
     }
 
     .card-title {
-      color: #00d9ff;
+      color: #0077b6;
       font-weight: 600;
+      margin-bottom: 15px;
     }
 
     .card-text i {
@@ -62,8 +74,8 @@
     }
 
     footer {
-      background-color: #111;
-      color: #ccc;
+      background: linear-gradient(90deg, #0077b6, #00d9ff);
+      color: #fff;
     }
 
     @media (max-width: 768px) {
@@ -76,7 +88,7 @@
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
     <a class="navbar-brand" href="index.html"><i class="fas fa-home"></i> Tanishk Wagh</a>
   </div>
