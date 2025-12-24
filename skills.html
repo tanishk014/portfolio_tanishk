@@ -39,7 +39,6 @@
 
     .skill-card {
       background-color: #fff;
-      border: none;
       border-radius: 15px;
       padding: 30px;
       transition: 0.3s ease;
@@ -62,7 +61,6 @@
     .skill-title {
       font-size: 1.3rem;
       font-weight: 600;
-      color: #333;
     }
 
     footer {
@@ -76,213 +74,251 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="index.html"><i class="fas fa-home"></i> Tanishk Wagh</a>
+    <a class="navbar-brand" href="index.html">
+      <i class="fas fa-home"></i> Tanishk Wagh
+    </a>
   </div>
 </nav>
 
 <!-- Skills Section -->
 <div class="container mt-5">
-  <h2 class="section-title"><i class="fas fa-tools"></i> My Skills</h2>
+  <h2 class="section-title">
+    <i class="fas fa-tools"></i> My Skills
+  </h2>
 
   <div class="row g-4">
-    <!-- HTML -->
-    <div class="col-md-4">
-      <div class="skill-card" data-bs-toggle="modal" data-bs-target="#htmlModal">
-        <i class="fab fa-html5"></i>
-        <div class="skill-title">HTML</div>
-      </div>
-    </div>
-    <!-- CSS -->
-    <div class="col-md-4">
-      <div class="skill-card" data-bs-toggle="modal" data-bs-target="#cssModal">
-        <i class="fab fa-css3-alt"></i>
-        <div class="skill-title">CSS</div>
-      </div>
-    </div>
-    <!-- Core Java -->
-    <div class="col-md-4">
-      <div class="skill-card" data-bs-toggle="modal" data-bs-target="#javaModal">
-        <i class="fab fa-java"></i>
-        <div class="skill-title">Core Java</div>
-      </div>
-    </div>
-    <!-- SQL -->
-    <div class="col-md-4">
-      <div class="skill-card" data-bs-toggle="modal" data-bs-target="#sqlModal">
-        <i class="fas fa-database"></i>
-        <div class="skill-title">SQL</div>
-      </div>
-    </div>
-    <!-- PHP -->
-    <div class="col-md-4">
-      <div class="skill-card" data-bs-toggle="modal" data-bs-target="#phpModal">
-        <i class="fab fa-php"></i>
-        <div class="skill-title">PHP</div>
-      </div>
-    </div>
-    <!-- Manual Testing -->
+
     <div class="col-md-4">
       <div class="skill-card" data-bs-toggle="modal" data-bs-target="#manualModal">
         <i class="fas fa-vial"></i>
         <div class="skill-title">Manual Testing</div>
       </div>
     </div>
-    <!-- Jira -->
+
+    <div class="col-md-4">
+      <div class="skill-card" data-bs-toggle="modal" data-bs-target="#sdlcModal">
+        <i class="fas fa-project-diagram"></i>
+        <div class="skill-title">SDLC</div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="skill-card" data-bs-toggle="modal" data-bs-target="#stlcModal">
+        <i class="fas fa-tasks"></i>
+        <div class="skill-title">STLC</div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="skill-card" data-bs-toggle="modal" data-bs-target="#sqlModal">
+        <i class="fas fa-database"></i>
+        <div class="skill-title">SQL</div>
+      </div>
+    </div>
+
     <div class="col-md-4">
       <div class="skill-card" data-bs-toggle="modal" data-bs-target="#jiraModal">
         <i class="fab fa-jira"></i>
         <div class="skill-title">Jira</div>
       </div>
     </div>
-    <!-- GitHub -->
+
+    <div class="col-md-4">
+      <div class="skill-card" data-bs-toggle="modal" data-bs-target="#seleniumModal">
+        <i class="fas fa-robot"></i>
+        <div class="skill-title">Selenium</div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="skill-card" data-bs-toggle="modal" data-bs-target="#unitModal">
+        <i class="fas fa-check-circle"></i>
+        <div class="skill-title">Unit Testing</div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="skill-card" data-bs-toggle="modal" data-bs-target="#integrationModal">
+        <i class="fas fa-code-branch"></i>
+        <div class="skill-title">Integration Testing</div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="skill-card" data-bs-toggle="modal" data-bs-target="#systemModal">
+        <i class="fas fa-cogs"></i>
+        <div class="skill-title">System Testing</div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="skill-card" data-bs-toggle="modal" data-bs-target="#acceptanceModal">
+        <i class="fas fa-user-check"></i>
+        <div class="skill-title">Acceptance Testing</div>
+      </div>
+    </div>
+
     <div class="col-md-4">
       <div class="skill-card" data-bs-toggle="modal" data-bs-target="#githubModal">
         <i class="fab fa-github"></i>
         <div class="skill-title">GitHub</div>
       </div>
     </div>
-    <!-- BrowserStack -->
-    <div class="col-md-4">
-      <div class="skill-card" data-bs-toggle="modal" data-bs-target="#browserstackModal">
-        <i class="fas fa-globe"></i>
-        <div class="skill-title">BrowserStack</div>
-      </div>
-    </div>
+
   </div>
 </div>
 
 <!-- Modals -->
 
-<!-- HTML Modal -->
-<div class="modal fade" id="htmlModal" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-dark">
-      <div class="modal-header">
-        <h5 class="modal-title">HTML - Basics</h5>
-        <button class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <p>HTML (HyperText Markup Language) is the standard language used to create web pages. It defines the structure and layout using elements like headings, paragraphs, links, images, etc.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- CSS Modal -->
-<div class="modal fade" id="cssModal" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-dark">
-      <div class="modal-header">
-        <h5 class="modal-title">CSS - Basics</h5>
-        <button class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <p>CSS (Cascading Style Sheets) is used to style and layout web pages. It controls fonts, colors, spacing, and responsive design across devices.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Java Modal -->
-<div class="modal fade" id="javaModal" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-dark">
-      <div class="modal-header">
-        <h5 class="modal-title">Core Java - Basics</h5>
-        <button class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <p>Core Java includes basic concepts like Object-Oriented Programming, classes, objects, loops, arrays, and exception handling used in Java applications.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- SQL Modal -->
-<div class="modal fade" id="sqlModal" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-dark">
-      <div class="modal-header">
-        <h5 class="modal-title">SQL - Basics</h5>
-        <button class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <p>SQL (Structured Query Language) is used to manage data in relational databases. It includes commands like SELECT, INSERT, UPDATE, DELETE, and JOIN.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- PHP Modal -->
-<div class="modal fade" id="phpModal" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-dark">
-      <div class="modal-header">
-        <h5 class="modal-title">PHP - Basics</h5>
-        <button class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <p>PHP (Hypertext Preprocessor) is a server-side scripting language used to build dynamic websites. It can interact with databases, handle forms, and manage sessions.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Manual Testing Modal -->
 <div class="modal fade" id="manualModal" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-dark">
+    <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">Manual Testing</h5>
         <button class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p>Manual Testing involves testing software manually without using automation tools. Testers check for bugs, performance issues, and usability by following test cases and scenarios.</p>
+        <p>Manual testing involves executing test cases without automation tools to identify defects.</p>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Jira Modal -->
+<div class="modal fade" id="sdlcModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">SDLC</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>SDLC defines phases such as requirement analysis, design, development, testing, deployment, and maintenance.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="stlcModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">STLC</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>STLC includes test planning, test case design, execution, defect tracking, and closure.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="sqlModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">SQL</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>SQL is used to retrieve, insert, update, and manage data in relational databases.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="modal fade" id="jiraModal" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-dark">
+    <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">Jira</h5>
         <button class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p>Jira is a popular project management and issue tracking tool used for Agile software development. It helps in sprint planning, bug tracking, and team collaboration.</p>
+        <p>Jira is used for bug tracking, sprint planning, and agile project management.</p>
       </div>
     </div>
   </div>
 </div>
 
-<!-- GitHub Modal -->
+<div class="modal fade" id="seleniumModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Selenium</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Selenium automates web applications for functional and regression testing.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="unitModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Unit Testing</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Unit testing validates individual components of an application.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="integrationModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Integration Testing</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Integration testing checks interaction between combined modules.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="systemModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">System Testing</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>System testing validates the complete integrated system.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="acceptanceModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Acceptance Testing</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Acceptance testing ensures the application meets business requirements.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="modal fade" id="githubModal" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-dark">
+    <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">GitHub</h5>
         <button class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p>GitHub is a version control and collaboration platform for developers. It allows teams to manage code repositories, track issues, and contribute to open-source projects.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- BrowserStack Modal -->
-<div class="modal fade" id="browserstackModal" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-dark">
-      <div class="modal-header">
-        <h5 class="modal-title">BrowserStack</h5>
-        <button class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <p>BrowserStack is a cloud-based testing platform that allows developers to test websites and apps across real devices and browsers without requiring physical hardware.</p>
+        <p>GitHub is used for version control and collaboration.</p>
       </div>
     </div>
   </div>
